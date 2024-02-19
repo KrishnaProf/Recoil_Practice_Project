@@ -7,8 +7,10 @@ function App() {
   return <RecoilRoot>
     <MainApp />
   </RecoilRoot>
+
   
 }
+
 
 function MainApp(){
   const networkNotificationCount = useRecoilValue(networkAtom)
