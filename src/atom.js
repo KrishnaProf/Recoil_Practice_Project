@@ -1,5 +1,6 @@
 // Purpose: Define the atom for the Recoil state management system.
 import { atom, selector } from 'recoil';
+import { TODOS } from "./todos";
 
 
 export const networkAtom = atom({
@@ -33,4 +34,11 @@ export const totalNotificationSelector = selector({
 
     }
 })
+
+export const todosAtomFamily = atomFamily({
+  key: 'todosAtomFamily',
+  default: id => {
+    return TODOS.find(x => x.id === id)
+  },
+});
 
